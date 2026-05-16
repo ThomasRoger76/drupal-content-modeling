@@ -46,6 +46,11 @@ Guide de référence pour les décisions d'architecture de contenu Drupal 8-11+ 
 | Champ calculé (non stocké) | **Computed field** via `#[FieldType]` | Valeur calculée à la lecture | [custom-entities.md](custom-entities.md) |
 | Entity avec plusieurs bundles (comme node types) | **ContentEntityBase** + bundle entity | Pattern Drupal natif | [custom-entities.md](custom-entities.md) |
 | Accès granulaire par entité (multi-tenant) | **AccessControlHandler** custom | + éventuellement Group module | [custom-entities.md](custom-entities.md) |
+| **Page builder drag-and-drop pour les éditeurs** | `drupal/dxpr_builder` — alternative visuelle à Layout Builder | [layout-builder.md](layout-builder.md) |
+| **Paragraphs en sections avec colonnes** | `drupal/layout_paragraphs` — Layout Builder UI dans les Paragraphs | [paragraphs.md](paragraphs.md) |
+| **Transitions de statut planifiées** | `drupal/scheduled_transitions` — publier/dépublier à une date | [nodes-content-types.md](nodes-content-types.md) |
+| Verrouiller un contenu en cours d'édition | `drupal/content_lock` — empêche l'édition simultanée | [nodes-content-types.md](nodes-content-types.md) |
+| Cloner un nœud / une entité | `drupal/entity_clone` — duplication via UI ou programmatique | [nodes-content-types.md](nodes-content-types.md) |
 
 ## Paragraphs vs Layout Builder — Tableau Décisionnel
 
