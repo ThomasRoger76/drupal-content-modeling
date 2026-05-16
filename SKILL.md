@@ -28,7 +28,9 @@ Guide de référence pour les décisions d'architecture de contenu Drupal 8-11+ 
 | Navigation principale / secondaire | **Menu links** (pas Taxonomy) | API Menu native, traduction, poids | [nodes-content-types.md](nodes-content-types.md) |
 | Relation Many-to-Many entre entités | **Entity Reference** (champ) | Joins DB, Views avec relation | [field-types.md](field-types.md) |
 | Données transactionnelles haute fréquence | **Custom table** + `hook_schema` | Pas de surcharge Entity API | [custom-entities.md](custom-entities.md) |
-| Composants avec configuration dev (pas éditeur) | **Block custom** (plugin) | Configurable mais pas éditable en UI | [nodes-content-types.md](nodes-content-types.md) |
+| Composants avec configuration dev (pas éditeur) | **Block custom** (plugin PHP) | Configurable mais pas éditable en UI | [nodes-content-types.md](nodes-content-types.md) |
+| Bloc éditorial avec champs (CTA, citation, bannière) | **Block Content** (`block_content`) | Entité avec champs, réutilisable, traductible | [block-content-types.md](block-content-types.md) |
+| Bloc existant réutilisé dans Layout Builder | **Block Content** → Reuse existing block | Même entité dans plusieurs régions/pages | [block-content-types.md](block-content-types.md) |
 | Paragraphs vs Layout Builder — lequel choisir ? | Voir tableau comparatif | Critères fonctionnels et techniques | [paragraphs.md](paragraphs.md) |
 | Paragraphes imbriqués (sections > colonnes > blocs) | **Nested Paragraphs** — avec précaution | Max 3 niveaux, impact perfs | [paragraphs.md](paragraphs.md) |
 | Comportement conditionnel selon le type de para | **Paragraphs Behaviors** | Plugin `ParagraphsBehaviorInterface` | [paragraphs.md](paragraphs.md) |
