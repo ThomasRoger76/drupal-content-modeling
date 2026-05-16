@@ -65,6 +65,39 @@ use Drupal\Core\Field\BaseFieldDefinition;
 /**
  * Entité Commande.
  *
+ * D11+ — Remplacer l'annotation @ContentEntityType par un PHP Attribute :
+ *
+ * #[ContentEntityType(
+ *   id: 'commande',
+ *   label: new TranslatableMarkup('Commande'),
+ *   label_collection: new TranslatableMarkup('Commandes'),
+ *   handlers: [
+ *     'access' => 'Drupal\mon_module\Entity\CommandeAccessControlHandler',
+ *     'list_builder' => 'Drupal\mon_module\Entity\CommandeListBuilder',
+ *     'form' => [
+ *       'default' => 'Drupal\mon_module\Entity\Form\CommandeForm',
+ *       'delete' => 'Drupal\mon_module\Entity\Form\CommandeDeleteForm',
+ *     ],
+ *     'route_provider' => [
+ *       'html' => 'Drupal\Core\Entity\Routing\AdminHtmlRouteProvider',
+ *     ],
+ *   ],
+ *   base_table: 'commande',
+ *   translatable: true,
+ *   admin_permission: 'administer commandes',
+ *   entity_keys: [
+ *     'id' => 'id', 'uuid' => 'uuid', 'langcode' => 'langcode', 'label' => 'reference',
+ *   ],
+ *   links: [
+ *     'canonical' => '/admin/commandes/{commande}',
+ *     'add-form' => '/admin/commandes/add',
+ *     'edit-form' => '/admin/commandes/{commande}/edit',
+ *     'delete-form' => '/admin/commandes/{commande}/delete',
+ *     'collection' => '/admin/commandes',
+ *   ],
+ * )]
+ *
+ * D8-D10 — Garder l'annotation @ContentEntityType ci-dessous.
  * @ContentEntityType(
  *   id = "commande",
  *   label = @Translation("Commande"),
